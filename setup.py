@@ -24,7 +24,7 @@ setup(
     name='parse_rest',
     version='0.2.20170114',
     description='A client library for Parse.com\'.s REST API',
-    url='https://github.com/milesrichardson/ParsePy',
+    url='https://github.com/winglight//ParsePy',
     packages=['parse_rest'],
     package_data={"parse_rest": [os.path.join("cloudcode", "*", "*")]},
     install_requires=['six'],
