@@ -21,7 +21,7 @@ from parse_rest import core
 
 import os
 
-API_ROOT = os.environ.get('PARSE_API_ROOT') or 'http://stocklogs.herokuapp.com/parse'
+API_ROOT = os.environ.get('PARSE_API_ROOT') or 'http://www.jyrz.xyz/parse'
 
 ACCESS_KEYS = {}
 
@@ -30,14 +30,15 @@ ACCESS_KEYS = {}
 CONNECTION_TIMEOUT = 60
 
 
-def register(server_url, app_id, rest_key, **kw):
+def register(app_id, rest_key, **kw):
     global ACCESS_KEYS
     ACCESS_KEYS = {
         'app_id': app_id,
         'rest_key': rest_key
         }
     ACCESS_KEYS.update(**kw)
-    API_ROOT = server_url
+    global API_ROOT
+    print("API_ROOT", API_ROOT)
 
 
 class SessionToken:
